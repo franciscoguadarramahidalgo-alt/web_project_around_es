@@ -54,3 +54,7 @@ function fillProfileForm() {
   profileTitle.textContent = inputName.value;
   profileDescription.textContent = inputDescription.value;
 }
+function handleOpenEditModal() {
+  fillProfileForm();
+  openModal(editProfileModal);
+}
