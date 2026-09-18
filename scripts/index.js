@@ -28,3 +28,6 @@ const initialCards = [
 initialCards.forEach(function (card) {
   console.log(card.name);
 });
+const editProfileButton = document.querySelector(`.profile__edit-button`);
+const closeProfileButton = document.querySelector(`.popup__close`);
+const editProfileModal = document.querySelector(`#edit-popup`);
