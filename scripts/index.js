@@ -63,3 +63,4 @@ function handleProfileFormSubmit(evt) {
   profileDescription.textContent = inputDescription.value;
   closeModal(editProfileModal);
 }
+editProfileForm.addEventListener(`submit`, handleProfileFormSubmit);
