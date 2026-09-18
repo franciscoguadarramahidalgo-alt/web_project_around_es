@@ -44,17 +44,15 @@ function openModal(modalElement) {
 function closeModal(modalElement) {
   modalElement.classList.remove(`popup_is-opened`);
 }
-editProfileButton.addEventListener(`click`, function () {
-  openModal(editProfileModal);
-});
-closeProfileButton.addEventListener(`click`, function () {
-  closeModal(editProfileModal);
-});
 function fillProfileForm() {
-  profileTitle.textContent = inputName.value;
-  profileDescription.textContent = inputDescription.value;
+  inputName.value = profileTitle.textContent;
+  inputDescription.value = profileDescription.textContent;
 }
 function handleOpenEditModal() {
   fillProfileForm();
   openModal(editProfileModal);
 }
+editProfileButton.addEventListener(`click`, handleOpenEditModal);
+closeProfileButton.addEventListener(`click`, function () {
+  closeModal(editProfileModal);
+});
