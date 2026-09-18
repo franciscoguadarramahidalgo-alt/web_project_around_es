@@ -31,3 +31,9 @@ initialCards.forEach(function (card) {
 const editProfileButton = document.querySelector(`.profile__edit-button`);
 const closeProfileButton = document.querySelector(`.popup__close`);
 const editProfileModal = document.querySelector(`#edit-popup`);
+function openModal(modalElement) {
+  modalElement.classList.add(`modal_is-opened`);
+}
+function closeModal(modalElement) {
+  modalElement.classList.remove(`modal_is-opened`);
+}
