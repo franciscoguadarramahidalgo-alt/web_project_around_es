@@ -38,6 +38,7 @@ const inputName = document.querySelector(`.popup__input_type_name`);
 const inputDescription = document.querySelector(
   `.popup__input_type_description`,
 );
+const editProfileForm = document.querySelector(`#edit-profile-form`);
 function openModal(modalElement) {
   modalElement.classList.add(`popup_is-opened`);
 }
@@ -56,3 +57,9 @@ editProfileButton.addEventListener(`click`, handleOpenEditModal);
 closeProfileButton.addEventListener(`click`, function () {
   closeModal(editProfileModal);
 });
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+  profileTitle.textContent = inputName.value;
+  profileDescription.textContent = inputDescription.value;
+  closeModal(editProfileModal);
+}
